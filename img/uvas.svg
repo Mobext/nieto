@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.093" height="31.572" viewBox="0 0 24.093 31.572">
+  <g id="Grupo_7" data-name="Grupo 7" transform="translate(-37 -501.872)">
+    <g id="Elipse_1" data-name="Elipse 1" transform="translate(37 510.245)" fill="none" stroke="#fff" stroke-width="1">
+      <ellipse cx="3.569" cy="3.569" rx="3.569" ry="3.569" stroke="none"/>
+      <ellipse cx="3.569" cy="3.569" rx="3.069" ry="3.069" fill="none"/>
+    </g>
+    <g id="Elipse_2" data-name="Elipse 2" transform="translate(45.477 510.245)" fill="none" stroke="#fff" stroke-width="1">
+      <ellipse cx="3.569" cy="3.569" rx="3.569" ry="3.569" stroke="none"/>
+      <ellipse cx="3.569" cy="3.569" rx="3.069" ry="3.069" fill="none"/>
+    </g>
+    <g id="Elipse_3" data-name="Elipse 3" transform="translate(45.477 510.245)" fill="none" stroke="#fff" stroke-width="1">
+      <ellipse cx="3.569" cy="3.569" rx="3.569" ry="3.569" stroke="none"/>
+      <ellipse cx="3.569" cy="3.569" rx="3.069" ry="3.069" fill="none"/>
+    </g>
+    <g id="Elipse_7" data-name="Elipse 7" transform="translate(45.477 526.306)" fill="none" stroke="#fff" stroke-width="1">
+      <ellipse cx="3.569" cy="3.569" rx="3.569" ry="3.569" stroke="none"/>
+      <ellipse cx="3.569" cy="3.569" rx="3.069" ry="3.069" fill="none"/>
+    </g>
+    <g id="Elipse_5" data-name="Elipse 5" transform="translate(49.492 518.275)" fill="none" stroke="#fff" stroke-width="1">
+      <ellipse cx="3.569" cy="3.569" rx="3.569" ry="3.569" stroke="none"/>
+      <ellipse cx="3.569" cy="3.569" rx="3.069" ry="3.069" fill="none"/>
+    </g>
+    <g id="Elipse_6" data-name="Elipse 6" transform="translate(41.015 518.275)" fill="none" stroke="#fff" stroke-width="1">
+      <ellipse cx="3.569" cy="3.569" rx="3.569" ry="3.569" stroke="none"/>
+      <ellipse cx="3.569" cy="3.569" rx="3.069" ry="3.069" fill="none"/>
+    </g>
+    <g id="Elipse_4" data-name="Elipse 4" transform="translate(53.954 510.245)" fill="none" stroke="#fff" stroke-width="1">
+      <ellipse cx="3.569" cy="3.569" rx="3.569" ry="3.569" stroke="none"/>
+      <ellipse cx="3.569" cy="3.569" rx="3.069" ry="3.069" fill="none"/>
+    </g>
+    <path id="Trazado_8" data-name="Trazado 8" d="M1.963,7.555A5.211,5.211,0,0,1,1.37,0" transform="translate(49.011 502.677) rotate(14)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    <g id="Trazado_9" data-name="Trazado 9" transform="matrix(0.966, -0.259, 0.259, 0.966, 42.018, 503.144)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4.582,5.422C4.352,3.912,4.743.349.007,0-.143,3.8,2.186,4.839,4.582,5.422Z" stroke="none"/>
+      <path d="M 3.434435606002808 4.028828620910645 C 3.273131370544434 2.809139251708984 2.854088544845581 1.626709342002869 1.051510691642761 1.169802665710449 C 1.260885834693909 2.706604480743408 2.09827709197998 3.505352973937988 3.434435606002808 4.028828620910645 M 4.582407474517822 5.422177314758301 C 2.185877561569214 4.8393874168396 -0.1425423622131348 3.796587467193604 0.006817642133682966 -2.534713757995632e-06 C 4.742997646331787 0.3494074642658234 4.351527690887451 3.912067413330078 4.582407474517822 5.422177314758301 Z" stroke="none" fill="#fff"/>
+    </g>
+  </g>
+</svg>

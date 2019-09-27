@@ -1,0 +1,688 @@
+html, body, * {
+    /* font-family: 'Playfair Display', serif; */
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300; 
+}
+.clear60 { width: 100%; height: 0; clear: both;}
+
+
+
+header { background-color: #2E3A46; position: fixed; top: 0; left: 0; width: 100%; height: auto; text-align: center; z-index: 9999; height: 60px;
+    -moz-transition:all 0.25s ease 0s;
+    -o-transition:all 0.25s ease 0s;
+    -ms-transition:all 0.25s ease 0s;
+    -webkit-transition:all 0.25s ease 0s;}
+header * {
+    -moz-transition:all 0.25s ease 0s;
+    -o-transition:all 0.25s ease 0s;
+    -ms-transition:all 0.25s ease 0s;
+    -webkit-transition:all 0.25s ease 0s;
+}
+header .logo { position: absolute; left: 0px; height: 70%; top: 50%; transform: translateY(-50%); left: 1rem; opacity: 0;}
+header.header-internas .logo{ opacity: 1;}
+nav {  display: inline-block; margin-top: 0.8rem;}
+nav * {
+    -moz-transition:all 0.25s ease 0s;
+    -o-transition:all 0.25s ease 0s;
+    -ms-transition:all 0.25s ease 0s;
+    -webkit-transition:all 0.25s ease 0s;
+}
+nav p { color: #FFF; font-weight: 300; font-size: 13px; text-transform: uppercase; display: inline-block; padding: 0px 0.2em; position: relative; overflow: hidden; margin: 0px 0.3em; padding-top: 0.4em;}
+nav p span { position: absolute; bottom: 0px; left: -100%; background-color: #8B97A2; width: 100%; height: 1px;}
+nav p:hover span { left: 0%;}
+nav:hover p {opacity: 0.7;}
+nav p:hover {opacity: 1;}
+
+
+.menu-scroll { height: 50px; text-align: right;}
+.menu-scroll .logo { opacity: 1;}
+.menu-scroll nav {  margin-top: 0.6rem; margin-right: 60px; border-right: 1px solid #656F79; padding-right: 10px; }
+.menu-scroll nav p { font-size: 12px;}
+.menu-scroll .languaje {  top: 0.4rem;}
+.menu-scroll.header-internas .logo { display: block;} 
+
+
+
+.menu-mobile { justify-content: space-around; align-items: center; display: none; cursor: pointer;}
+.menu-mobile>p { color: #A7907E; font-size: 14px; letter-spacing: 1px;}
+.menu-mobile>img { width: 14px;}
+
+
+
+#page-loader {
+    position: fixed; display: flex; justify-content: center; align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: #2E3A46;
+    z-index: 9999999;
+}
+#page-loader img { width: 80%; max-width: 300px; }
+
+ 
+.content-menu-mobile { width: 100%; height: 100%; position: fixed; background-color: #2E3A46; z-index: 99999; display: none; flex-direction: column; justify-content: space-around; align-items: center;}
+.content-menu-mobile .logo { width: 100%; display: flex; justify-content: center; align-items: center; padding: 20px 0px; }
+.content-menu-mobile .logo img { width: 260px}
+.content-menu-mobile nav { display: flex; flex-direction: column; text-align: center; border-top: 1px solid #6a727b; width: 100%;  flex: 1; justify-content: center;}
+.content-menu-mobile nav p { font-size: 17px; margin: 0.1em 0em;}
+.content-menu-mobile .languaje-mob { display: flex; justify-content: center; align-items: center; width: 100%; padding-bottom: 50px;}
+.content-menu-mobile .languaje-mob div {color: #FFF; padding: 4px; margin: 0px 4px;}
+.content-menu-mobile .languaje-mob div.active { border-bottom: 1px solid #A7907E;}
+.content-menu-mobile .languaje-mob div a { color: #FFF; }
+.content-menu-mobile .rrss { display: flex;border-top: 1px solid #6a727b; width: 100%; padding: 10px 0px; justify-content: center; }
+.content-menu-mobile .rrss li {color: #A7907E; padding: 4px; margin: 0px 4px;}
+.content-menu-mobile .rrss li a { color: #A7907E; font-weight: 500; }
+.content-menu-mobile .close { position: absolute; width: 20px; height: auto; top: 15px; right: 15px; cursor: pointer; padding: 6px;}
+.content-menu-mobile nav a { opacity: 0;
+    -moz-transition:all 0.25s ease 0s;
+    -o-transition:all 0.25s ease 0s;
+    -ms-transition:all 0.25s ease 0s;
+    -webkit-transition:all 0.25s ease 0s;}
+
+
+
+
+.fixed-option { position: fixed; right: 0; bottom: 12%; background-color: #2E3A46; z-index: 10; padding: 0.8rem 0.7rem; text-align: center; font-size: 16px; z-index: 100;}
+.fixed-option p { color: #FFF; font-weight: 500; padding: 0.2em 0.3em; font-size: 0.8em;}
+.fixed-option .line { width: 1.1em; height: 1px; background-color: #FFF; margin: 0.4em auto; opacity: 0.4;}
+.fixed-option img { width: 1em;}
+.fixed-option * {
+    -moz-transition:all 0.25s ease 0s;
+    -o-transition:all 0.25s ease 0s;
+    -ms-transition:all 0.25s ease 0s;
+    -webkit-transition:all 0.25s ease 0s;
+}
+.fixed-option > a:hover * { opacity: 0.6}
+
+
+
+.languaje { position: absolute; top: 0.6rem; right: 1rem; width: 36px; height: 40px; overflow: hidden;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -moz-transition:all 0.25s ease 0s;
+    -o-transition:all 0.25s ease 0s;
+    -ms-transition:all 0.25s ease 0s;
+    -webkit-transition:all 0.25s ease 0s;
+    -webkit-box-shadow: 0px 0px 13px -5px rgba(0,0,0,0);
+    -moz-box-shadow: 0px 0px 13px -5px rgba(0,0,0,0);
+    box-shadow: 0px 0px 13px -5px rgba(0,0,0,0);
+  }
+.languaje div { font-size: 14px; width: 100%; height: 40px; line-height: 40px; color: #FFF; font-weight: 300; cursor: pointer; text-align: center; font-size: 12px;
+    -moz-transition:all 0.25s ease 0s;
+    -o-transition:all 0.25s ease 0s;
+    -ms-transition:all 0.25s ease 0s;
+    -webkit-transition:all 0.25s ease 0s;}
+.languaje:hover { background-color: #FFF; height: auto;
+    -webkit-box-shadow: 0px 0px 13px -5px rgba(0,0,0,0.66);
+    -moz-box-shadow: 0px 0px 13px -5px rgba(0,0,0,0.66);
+    box-shadow: 0px 0px 13px -5px rgba(0,0,0,0.66);}
+.languaje:hover div { color: #333;}
+.languaje div:hover { color:#FFF; background-color: #1B232C;}
+
+
+
+
+
+
+.hero-content { width: 100%; position: relative; margin-top: 60px; height: 88vh;  /*background-image: url(../img/fondo-home.jpg); background-position:  center center; background-size: cover;*/ text-align: center; z-index: 1; overflow: ;}
+.hero-content .logo { position: relative; top: 7vh; height: 13vh;}
+.hero-content .know-more { position: absolute; bottom: 0px; z-index: 2; left: 50%; transform: translateX(-50%); text-align: center; cursor: pointer;}
+.hero-content .know-more p { font-size: 0.8rem; color: #FFF; font-weight: 500; margin-bottom: 7px;}
+.hero-content .know-more .line { width: 1px; height: 6vh; background-color: #A7907E; margin: auto;
+    -moz-transition:all 0.25s ease 0s;
+    -o-transition:all 0.25s ease 0s;
+    -ms-transition:all 0.25s ease 0s;
+    -webkit-transition:all 0.25s ease 0s;}
+.hero-content .know-more:hover .line { height: 7vh;}
+.hero-content .txt-container { position: absolute; bottom: 0px; top: 26vh; left: 2%; right: 0%; text-align: left; }
+.hero-content .txt-container p { font-family: 'Playfair Display', serif; color: #FFF; margin-left: 7vh;}
+.hero-content .txt-container h2 { font-family: 'Playfair Display', serif; color: #FFF; margin-left: 7vh; font-size: 9vh; line-height: 9.8vh; font-weight: 900; margin-top: 4vh;}
+.hero-content .txt-container p.p1 { font-size: 4vh; line-height: 5.6vh; margin-bottom: 0vh; font-weight: bold;  margin-top: 5vh; }
+.hero-content .txt-container p.p3 { font-size: 3.5vh; line-height: 4.8vh; margin-bottom: 2vh; font-weight: 600; margin-top: 2vh;}
+.hero-content .txt-container p.p4 { font-size: 9vh; line-height: 10vh; font-weight: 900; margin-top: 4vh;}
+.hero-content .lines1 { position: absolute; box-sizing: border-box; border-top: 1px solid #FFF; border-left: 1px solid #FFF; 
+    width: 6vh; height: 44vh; top: 0; left: 0;}
+.hero-content .lines2 { position: absolute; bottom: 0; left: 0; width: 1px; height: 9vh; border-left: 1px solid #FFF; box-sizing: border-box}
+.hero-content .lines2 img { height: 5vh; position: absolute; top: -7vh; left: 50%; transform: translateX(-50%);}
+
+.hero-content.nuestros-vinos { background-image: url(../img/nuestros-vinos.jpg); background-position:  center center; background-size: cover;}
+.hero-content.nuestros-espumantes { background-image: url(../img/nuestros-espumantes.jpg); background-position:  center center; background-size: cover;}
+
+.overlay-video { background: black; z-index: -10; position: absolute; top: 0; left: 0; min-width: 100%; max-width: 100%; min-height: 100%; opacity: 1; overflow: hidden;}
+.overlay-video .black { position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.4)}
+.elvideo {  position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -100; transform: translateX(-50%) translateY(-50%); background-size: cover; transition: 1s opacity;}
+
+.hero-content.nuestros-espumantes .txt-container h2 { margin-top: 1vh; }
+
+
+
+.destacado1 { width: 100%; display: flex; margin: 100px 0px; margin-top: 220px; align-items: center; position: relative;}
+.destacado1 .col1 { width: 46%; position: relative;}
+.destacado1 .col1 h5 { font-family: 'Playfair Display', serif; color: #2E3A46; font-weight: 900; position: absolute; font-size: 3.5vw; right: 2vw; line-height: 4.1vw; margin-top: -3.4vw; letter-spacing: -1px; z-index: 99;}
+.destacado1 .col1 img { width: 100%;}
+.destacado1 .col1 .nombre { text-transform: uppercase; letter-spacing: 2px; font-size: 1vw; text-align: right; font-weight: 300; margin-top: 12px;}
+.destacado1 .col2 { flex: 1; padding: 0px 9vw}
+.destacado1 .col2>p { font-size: 18px; line-height: 31px; font-weight: 300; margin-bottom: 30px;}
+.destacado1 .col2>p b { font-weight: 500;}
+.destacado1 .lines2 { position: absolute; top: -220px; left: 50%; box-sizing: border-box; width: 2vw; height: 280px; border-right: 1px solid #A7907E; border-bottom:  1px solid #A7907E; transform: translateX(-100%);}
+.destacado1 .lines1 { position: absolute; left: 0; height: 103%; bottom: 0;width: 9vw; z-index: 999;}
+.destacado1 .lines1 .cl1 { position: absolute; left: 0; height: 100%; width: 70%; box-sizing: border-box; border-bottom: 1px solid #A7907E; border-right: 1px solid #A7907E;}
+.destacado1 .lines1 .cl2 { position: absolute; right: 0; height: 100%; width: 30%; box-sizing: border-box; border-top: 1px solid #A7907E;}
+
+
+
+
+.destacado2 { width: 100%;  position: relative; margin-top: 200px;}
+.destacado2 .title { display: flex; align-items: center; position: relative;}
+.destacado2 .title .sello { width: 180px; position: relative; left: 5vw;}
+.destacado2 h5 { font-family: 'Playfair Display', serif; text-align: right; color: #2E3A46; font-weight: 900; font-size: 4.8vw; line-height: 5vw; flex: 1; right: 15vw; position: relative;}
+.destacado2 .lines1 { position: absolute; top: -1vw; right: 0; border-top: 1px solid #A7907E; border-left: 1px solid #A7907E; height: 20px; width: 48vw;}
+.destacado2 .lines2 { position: absolute; bottom: 1vw; right: 0; border-top: 1px solid #A7907E; border-left: 1px solid #A7907E; height: 250px; width: 9vw;}
+
+.destacado2-content { display: flex; align-items: center; margin-top: 40px; position: relative;} 
+.destacado2-content .col1 { flex: 1; }
+.destacado2-content .col1 .in { padding: 0px 8vw;}
+.destacado2-content .col1 .in>p { font-size: 18px; line-height: 31px; margin-bottom: 1.5em; }
+.destacado2-content .col1 button { margin-right: 20px; margin-bottom: 16px;}
+.destacado2-content .col2 { width: 40%; position: relative;}
+.destacado2-content .col2 img { width: 100%;}
+.destacado2-content .col2>.lines1 { position: absolute; top: 96%; right: 0; border-bottom: 1px solid #A7907E; border-left: 1px solid #A7907E; height: 50px; width: 9vw; z-index: -1; border-top: 0px;}
+.destacado2-content .background { position: absolute; left: 0; top: -80px; bottom: 20px;right: 15vw; background-image: url(../img/background-misc-1.png); background-repeat: no-repeat; background-size: cover; z-index: -1;}
+
+
+
+
+
+.destacado3 { width: 100%;  position: relative; margin-top: 230px; margin-bottom: 100px;}
+.destacado3 .lines1 { position: absolute; width: 55vw; height: 70px; top: -110px; left: 0; box-sizing: border-box;border-top: 1px solid #A7907E; border-right: 1px solid #A7907E; }
+.destacado3-content { display: flex; align-items: center; position: relative; width: 90vw; margin-left: auto; background-color: #8B544F; }
+.destacado3-content .info { flex:1; padding: 0px 5vw;}
+.destacado3-content .info > * { color: #FFF;}
+.destacado3-content .info h5 { font-family: 'Playfair Display', serif; color: #FFF; font-weight: 900; font-size: 4vw; line-height: 4.6vw; position: relative; margin-bottom: 1.5rem;}
+.destacado3-content .info>p { margin-bottom: 2rem; font-size: 18px; line-height: 31px;}
+.destacado3-content .info button { margin-right: 20px;}
+.destacado3-content .foto { width: 35vw; height: 560px; background-image: url(../img/foto-3.jpg); background-size: cover; background-position: center center;}
+.destacado3-content .lines2 { position: absolute; width: 80vw; height: 82px; top: 0px; left: 5vw; z-index: 99; }
+.destacado3-content .lines2 .box1 { position: absolute; width: 100%; height: 65%; box-sizing: border-box; border-bottom: 1px solid #FFF; border-right: 1px solid #FFF;}
+.destacado3-content .lines2 .box2 { position: absolute; width: 100%; height: 35%; top: 65%; box-sizing: border-box; border-left: 1px solid #FFF;}
+
+
+
+
+
+.btn-gold {  border: 2px solid #A7907E; background: transparent; padding: 12px 30px; position: relative; overflow: hidden;
+    -moz-transition: all 0.4s ease 0s; -o-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s; -webkit-transition: all 0.4s ease 0s;
+} 
+.btn-gold>p {  color: #A7907E; position: relative; font-size: 15px; font-weight: 600; z-index: 1;
+    -moz-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s; -webkit-transition: all 0.25s ease 0s;
+}
+.btn-gold span { position: absolute; width: 100%; height: 0%; left: 0; top: 100%; background-color: #A7907E; z-index: 0;
+    -moz-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s; -webkit-transition: all 0.25s ease 0s;}
+.btn-gold:hover p { color: #FFF;}
+.btn-gold:hover span { top: 0%; height: 100%;}
+
+
+
+.btn-white {  border: 2px solid #FFF; background: transparent; padding: 12px 30px; position: relative; overflow: hidden;
+    -moz-transition: all 0.4s ease 0s; -o-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s; -webkit-transition: all 0.4s ease 0s;
+} 
+.btn-white>p {  color: #FFF; position: relative; font-size: 15px; font-weight: 600; z-index: 1;
+    -moz-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s; -webkit-transition: all 0.25s ease 0s;
+}
+.btn-white span { position: absolute; width: 100%; height: 0%; left: 0; top: 100%; background-color: #FFF; z-index: 0;
+    -moz-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s; -webkit-transition: all 0.25s ease 0s;}
+.btn-white:hover p { color: #A7907E;}
+.btn-white:hover span { top: 0%; height: 100%;}
+
+
+
+.btn-blue {  border: 2px solid #2E3A46; background: transparent; padding: 12px 30px; position: relative; overflow: hidden;
+    -moz-transition: all 0.4s ease 0s; -o-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s; -webkit-transition: all 0.4s ease 0s;
+} 
+.btn-blue>p {  color: #2E3A46; position: relative; font-size: 15px; font-weight: 600; z-index: 1;
+    -moz-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s; -webkit-transition: all 0.25s ease 0s;
+}
+.btn-blue span { position: absolute; width: 100%; height: 0%; left: 0; top: 100%; background-color: #2E3A46; z-index: 0;
+    -moz-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s; -webkit-transition: all 0.25s ease 0s;}
+.btn-blue:hover p { color: #FFF;}
+.btn-blue:hover span { top: 0%; height: 100%;}
+
+
+
+.btn-more { background: transparent; border: none; text-align: left; margin: 0px; padding: 0px; margin-top: 1.4rem; display: flex; justify-content: start; align-items: center;padding: 6px 0px;}
+.btn-more>p { color: #2E3A46; font-size: 13px; margin-right: 10px;
+    -moz-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s; -webkit-transition: all 0.25s ease 0s;}
+.btn-more>.arrow { width: 18px;}
+.btn-more:hover p { margin-right: 16px; }
+
+
+
+
+
+
+
+
+.novedades { width: 90%; margin: 100px auto; height: auto; text-align: center;}
+.novedades .title { width: 96%; height: auto; display: flex; align-items: center; margin: auto;}
+.novedades .title h5 { font-family: 'Playfair Display', serif; color: #2E3A46; font-weight: 900; font-size: 4.2vw; line-height: 4.6vw; position: relative; padding-right: 20px;}
+.novedades .title .lines1 { flex: 1; height: 30px; width: 100%; margin-top: 44px; border-top: 1px solid #A7907E; border-right: 1px solid #A7907E;}
+
+.list-news {  display: block; justify-content: space-between; margin-top: 60px; width: 100%; margin-bottom: 60px;}
+.list-news .item { width: 46%;}
+.list-news .item .foto { width: 100%;}
+.list-news .item .txt-cont { margin-top: 20px; border-left: 6px solid #EFEFEF; padding-left: 20px; padding-right: 10px;; text-align: left}
+.list-news .item .txt-cont span { font-size: 12px;  color: #A7907E; letter-spacing: 3px; }
+.list-news .item .txt-cont h6 {font-family: 'Playfair Display', serif; color: #2E3A46; font-weight: bold; font-size: 2.1vw; line-height: 2.6vw; margin-bottom: 1rem; margin-top: 0.5rem; }
+.list-news .item .txt-cont>p { font-size: 16px; line-height: 28px; color: #222;}
+
+.list-news .slick-slide { padding: 0px 25px; box-sizing: border-box;}
+
+
+
+
+
+
+footer { width: 100%; height: auto; background-color: #222222; text-align: center; display: flex; flex-direction: column; align-items: center; }
+footer .logo { width: 170px; margin: 25px 0px; margin-bottom: 18px;}
+footer .line { width: 60%; height: 1px;  background-color: #616161; opacity: 0.5}
+footer nav { margin-bottom: 20px;}
+footer nav p { font-size: 13px;}
+footer .bottom { background-color: #3C3B3B; width: 100%; padding: 16px 0px; display: flex; justify-content: space-between; align-items: center;}
+footer .bottom>p { color: #FFF; font-size: 10px; letter-spacing: 1px; margin-left: 20px; opacity: 0.8;}
+footer .bottom>p a { color: #FFF;}
+footer .bottom>p a:hover { text-decoration: underline}
+footer ul { display: flex; margin-right: 20px;}
+footer ul li {}
+footer ul li p { font-weight: bold; font-size: 12px; padding: 0px 6px;
+    -moz-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s; -webkit-transition: all 0.25s ease 0s;}
+footer ul li a p { color: #FFF;}
+footer ul li p:hover { opacity: 0.6;}
+footer .foot-mobile { display: none; width: 90%; margin: 30px 0px; background-color: #222;}
+footer .foot-mobile>li { width: 100%; height: auto; margin: 10px 0px; text-align: center;}
+
+
+
+
+
+.contenedor-vinos { position: relative; width: 90%; margin: auto; max-width: 1400px; display: flex; flex-direction: column; text-align: center; margin-bottom: 120px;}
+.contenedor-vinos .lines1 { background-color: #A7907E; width: 1px; height: 60px; margin: auto; margin-bottom: 25px;}
+.contenedor-vinos h4 {  font-family: 'Playfair Display', serif; color: #2E3A46; font-weight: 900; font-size: 3.9vw; line-height: 3.2vw; padding-bottom: 0.8em;}
+.contenedor-vinos h4>span{ color: #2E3A46; font-weight: 300; font-size: 1.7vw; letter-spacing: 2px; text-transform: uppercase;}
+.contenedor-vinos>p { font-size: 18px; line-height: 33px; font-weight: 300; width: 90%; max-width: 800px; margin: auto;}
+.contenedor-vinos .lista-vinos { display: flex; justify-content: space-around;  margin: 50px auto; margin-bottom: 30px; flex-wrap: wrap; width: 90%; }
+
+
+
+
+
+.contenedor-vinos .lista-vinos .item .cont-foto {  position: relative; }
+.contenedor-vinos .lista-vinos .item .cont-foto .foto { position: absolute; left: 12px; right: 12px; top: 12px; bottom: 12px; overflow: hidden;z-index: 9;}
+.contenedor-vinos .lista-vinos .item .cont-foto .foto img { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); height: 100%;
+    -moz-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.contenedor-vinos .lista-vinos .item .cont-foto .foto:hover img { height: 110%;}
+.contenedor-vinos .lista-vinos .item .cont-foto .color { position: absolute; bottom: 0; left: 0; width: 100%; background-color: chartreuse; height: 60px; z-index: 1}
+.contenedor-vinos .lista-vinos .item .cont-logo { width: 100%; height: 65px; display: flex; justify-content: center; align-items: center;}
+.contenedor-vinos .lista-vinos .item .logo { width: 150px; max-height: 40px;}
+.contenedor-vinos .lista-vinos .item .btn-more { margin: auto;}
+.contenedor-vinos .lista-vinos .item .cont-foto .color1 { background-color: #C1C1C1}
+.contenedor-vinos .lista-vinos .item .cont-foto .color2 { background-color: #C5A993}
+.contenedor-vinos .lista-vinos .item .cont-foto .color3 { background-color: #8B544F}
+.contenedor-vinos .lista-vinos .item .cont-foto .color4 { background-color: #D59068}
+.contenedor-vinos .lista-vinos .item .cont-foto .color5 { background-color: #A7907E}
+.contenedor-vinos .lista-vinos .item .cont-foto .color6 { background-color: #2E3A46}
+.contenedor-vinos .background { position: absolute; width: 100%; bottom: 0px; top: 120px; left: 0;  z-index: -1;
+background-image: url(../img/background-misc-1.png); background-size: cover;}
+
+
+
+
+.lista-vinos.column-3 { max-width: 900px;}
+.lista-vinos.column-3 .item {flex: none; margin-bottom: 30px;  width: 250px; padding: 0px 20px;}
+.lista-vinos.column-3 .item .cont-foto { width: 100%; height: 250px; }
+
+
+.lista-vinos.column-2 { max-width: 900px; margin-top: 120px;}
+.lista-vinos.column-2 .item {flex: none; margin-bottom: 80px;  width: 320px; padding: 0px 20px;}
+.lista-vinos.column-2 .item .cont-foto { width: 100%; height:320px; }
+.lista-vinos.column-2 .item .cont-foto .foto { background-image: url(../img/wood-1.png); background-size: cover; background-position:  center center; overflow: visible; }
+.lista-vinos.column-2 .item .cont-foto .foto .botella { position: absolute; height: 120%; top: 53%;
+    -moz-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s; -webkit-transition: all 0.25s ease 0s;}
+.lista-vinos.column-2 .item .cont-foto .foto:hover img { height: 126%;}
+.lista-vinos.column-2 .item .cont-logo { margin-top: 26px;}
+.lista-vinos.column-2 .item .logo { width: 170px; max-height: 65px;}
+
+
+
+
+
+
+
+
+
+.content-link { width: 100%; height: auto; display: flex; justify-items: center; align-items: center; margin-bottom: 150px;}
+.content-link .izq { width: 50%;height: auto; display: flex; justify-content: center; align-items: center; position: relative; }
+.content-link .izq img { position: relative; width: 80%;}
+.content-link .izq .border { background-color: #A7907E; width: 40%; height: 50%; position: absolute; bottom: -3%;  right: 8.4%;
+ z-index: -1;}
+.content-link .der {width: 50%}
+.content-link .der .lines1 { width: 100%; box-sizing: border-box; height: 22px; border-top: 1px solid #A7907E; border-left: 1px solid #A7907E; margin-bottom: -20px;}
+.content-link .der h6 { font-family: 'Playfair Display', serif; color: #2E3A46; font-weight: 900; font-size: 6vw; line-height: 3.5vw; margin-bottom: 60px;}
+.content-link .der h6 span { font-family: 'IBM Plex Sans', sans-serif; font-size: 1.4vw; color: #333; font-weight: 300; letter-spacing: 0.3em;}
+
+
+
+
+.content-link2 { width: 100%; height: auto; padding: 50px 0px;  margin-bottom: 70px; position: relative;}
+.content-link2 .in { position: relative; width: 95%; left: 5%; height: auto; display: flex; justify-content: flex-end; align-items: flex-start; flex-direction: column; background-color: #2E3A46; padding-top: 260px; padding-bottom: 2.5vw;}
+.content-link2 .in h6 {  font-family: 'Playfair Display', serif; color: #FFF; font-weight: 900; font-size: 5.5vw; line-height: 6.1vw; padding-left: 3vw; z-index: 9}
+.content-link2 .in button  { padding-left: 3vw;}
+.content-link2 .in button p { color: #FFF;}
+.content-link2 .in .lines1 { position: absolute; top: 0; right: 3vw; left: 3vw; height: 70px;}
+.content-link2 .in .lines1 .box1 { position: absolute; width: 100%; height: 65%; box-sizing: border-box; border-bottom: 1px solid #FFF; border-right: 1px solid #FFF; z-index: 9;}
+.content-link2 .in .lines1 .box2 { position: absolute; width: 100%; height: 35%; top: 65%; box-sizing: border-box; border-left: 1px solid #FFF;}
+.content-link2 .in .pic { position: absolute; right: 0; top: 0; bottom: 0; left: 23vw; overflow: hidden;}
+.content-link2 .in .pic img { position: absolute;  top: 50%; transform: translateY(-50%); width: 100%;}
+.content-link2 .background { position: absolute; top: 0; bottom: 0; left: 0; right: 3vw; background-image: url(../img/background-misc-1.png); background-size: cover; z-index: -1;}
+.content-link2 .in .lines2 {width: 27vw; height: 19px; background-color: #A7907E; position: absolute; bottom: 0px; right: 3vw; z-index: 99; transform: translateY(50%);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1200px){
+    header { height: 56px;}
+    header.header-internas .logo{ width: 80px;}
+
+    nav p { font-size: 11px; margin: 0px 0.1em;}
+    .languaje { right: 0.4rem;}
+    .hero-content { margin-top: 56px;}
+    .menu-scroll nav { margin-right: 46px; padding-right: 12px;}
+    .menu-scroll nav p { font-size: 11px; margin: 0px;}
+    
+    .destacado1 { margin-top: 120px;}
+
+    .destacado2 h5 { font-size: 5.8vw; line-height: 6vw;}
+    .destacado2-content .col1 .in { padding: 0px 7vw;}
+    .destacado2-content .background { bottom: -20px;}
+
+    .destacado3-content { width: 100%;}
+    .destacado3-content .foto { width: 46vw; height: 600px; }
+    .destacado3-content .lines2 { height: 60px;}
+
+    footer nav p { font-size: 10px;}
+
+    .list-news .item .txt-cont h6 { font-size: 2.8vw; line-height: 3.2vw; }
+
+    .contenedor-vinos h4 {  font-size: 5vw; line-height: 4.3vw; }
+    .contenedor-vinos h4>span { font-size: 2.5vw;}
+}
+
+
+@media screen and (max-width:960px){
+
+    .overlay-video { display: none}
+    .hero-content {  background-image: url(../img/fondo-home.jpg); background-position:  center center; background-size: cover;}
+
+    header { width: 100px; height: auto; padding: 6px 0px; top: 5px; right: 5px; left: initial;}
+    header .logo { left: -5rem; }
+    header.header-internas .logo{ display: none;}
+    .menu-mobile {display: flex; cursor: pointer;}
+    nav { display: none;}
+    .languaje { display: none;}
+    .hero-content { margin-top: 0px;}
+    .menu-scroll { width: 100%; top: 0; right: 0; display: flex; height: 44px;}
+    .menu-scroll .menu-mobile { width: 100px; margin-left: auto;}
+    .menu-scroll .logo { left: 1rem; }
+    
+    .hero-content { height: 96vh;}
+    .hero-content .txt-container { left: 4%; top: 31vh;}
+    .hero-content .txt-container p { margin-left: 4vh;}
+    .hero-content .txt-container h2 { font-size: 6vw; line-height: 6.7vw;margin-left: 4vw;}
+    .hero-content .txt-container p.p3 { font-size: 2.4vw; line-height: 3.5vw;}
+    .hero-content .lines1 { width: 3vh;height: 47vh; }
+    .hero-content .txt-container p.p1 { font-size: 3.3vw; line-height: 4.4vw; margin-bottom: 2vw;}
+
+    .hero-content.nuestros-vinos p.p2 { font-size: 8vw; line-height: 8.5vw;}
+    .hero-content.nuestros-vinos p.p3 { font-size: 3.4vw; line-height: 4.5vw;}
+    
+    .destacado1 { margin-top: 130px; flex-direction: column; }
+    .destacado1 .lines2 { display: none;}
+    .destacado1 .lines1 { height: 119%; width: 5.7vw; z-index: 0;}
+    .destacado1 .lines1 .cl1 { border-bottom: none;}
+    .destacado1 .lines1 .cl2 { display: none;}
+    .destacado1 .col1 { width: 80%; }
+    .destacado1 .col1 h5 { font-size: 6vw; right: initial; left: 3vw; line-height: 7vw;margin-top: -5.9vw;}
+    .destacado1 .col1 .nombre { letter-spacing: 1px; font-size: 2vw; text-align: left;}
+    .destacado1 .col2 { flex: initial; padding: 0px 0vw; width: 80%; margin-top: 40px;}
+
+    .destacado2 h5 { font-size: 7vw; line-height: 8vw;}
+    .destacado2 .title .sello { width: 160px; left: 2vw; }
+
+    .destacado2-content { flex-direction: column-reverse; }
+    .destacado2-content .col2 { width: 80%;}
+    .destacado2-content .col1 { width: 80%; flex: initial; padding-bottom: 20px;}
+    .destacado2-content .col1 .in { padding: 0px 0vw; margin-top: 40px; }
+    .destacado2-content .col2>.lines1 { display: none}
+    .destacado2-content .background { right: 3vw;}
+
+    .destacado3 { margin-top: 100px; margin-bottom: 0px; padding-top: 180px; background-image: url(../img/foto-4.jpg); background-size: cover; background-position: center right; height: auto;}
+    .destacado3-content { background-color:rgba(46,58,70,0.8)}
+    .destacado3 .lines1 { display: none}
+    .destacado3-content .lines2 { display: none}
+    .destacado3-content .foto { display: none}
+    .destacado3-content .info h5 { font-size: 6.5vw; line-height: 8.1vw;}
+    .destacado3-content .info { padding: 50px 8vw;}
+
+    .novedades { width: 92%; }
+    .novedades .title h5 { font-size: 6vw;}
+    .list-news .item .txt-cont h6 { font-size: 3.6vw; line-height: 3.9vw; }
+    .list-news .item { width: 48%;}
+
+    footer .bottom>p { font-size: 9px; margin-left: 10px;}
+    footer ul li p { font-size: 10px; padding: 0px 4px;}
+
+    .list-news .slick-slide {padding: 0px 15px; }
+    
+    .contenedor-vinos {  margin-bottom: 40px; }
+    .contenedor-vinos .background { display: none}
+    .contenedor-vinos h4 {  font-size: 6.5vw; line-height: 6vw; }
+    .contenedor-vinos h4>span { font-size: 3.2vw;}
+    
+    .content-link {  margin-bottom: 110px;}
+    .content-link .izq img { width: 100%;}
+    .content-link .izq .border { right: -2%;}
+    .content-link .der .lines1 { margin-bottom: -5px;}
+    .content-link .der { width: initial; flex: 1; padding-left: 30px;}
+    .content-link .der h6 { font-size: 7vw; line-height: 4.7vw; margin-bottom: 35px;}
+    .content-link .der h6 span { font-size: 2vw;}
+
+    .content-link2 .in { padding-top: 200px;}
+    .content-link2 .in h6 { font-size: 7.5vw; line-height: 8.1vw;}
+    .content-link2 .in .pic img { top: 50%; left: 50%; transform: translate(-50%,-50%); width: 130%;}
+
+}
+
+
+
+
+@media screen and (max-width:720px){
+
+    .content-menu-mobile nav p { font-size: 16px; margin: 0.1em 0em;    }
+
+    .hero-content .txt-container h2{ font-size: 8vw; line-height: 9.3vw;}
+    .hero-content .txt-container p.p3 { font-size: 3.2vw; line-height: 4.4vw;    }
+    .hero-content .txt-container p.p1 { font-size: 4.3vw; line-height: 5.4vw; margin-bottom: 2vw; }
+
+    .hero-content.nuestros-vinos p.p2 { font-size: 10vw; line-height: 11.3vw;    }
+    .hero-content.nuestros-vinos p.p3 { font-size: 4.2vw; line-height: 5.4vw;   }
+
+    footer .bottom { padding: 0px 0px;}
+    footer .logo { display: none}
+    footer ul {display: none}
+    footer .bottom>p {display: none}
+    footer .bottom { background-color: #222;}
+    footer .foot-mobile { display: flex; flex-direction: column; width: 100%;}
+    footer .foot-mobile li { margin: 0.2vw auto;}
+    footer .foot-mobile li p { color: #FFF; font-weight: 300; font-size: 2vw; letter-spacing: 1px; opacity: 0.6;}
+    footer .foot-mobile li p a { color: #FFF; text-decoration: underline;}
+
+    .novedades { width: 84%;}
+    .list-news .item .txt-cont h6 { font-size: 5vw; line-height: 5.6vw;}
+    .novedades .btn-blue { margin-top: 120px;}
+    .list-news .slick-dots { bottom: -50px; }
+
+    .fixed-option  { display: none !important;}
+
+    .contenedor-vinos h4 {  font-size: 9vw; line-height: 8.3vw; }
+    .contenedor-vinos h4>span {font-size: 4.2vw; }
+
+
+    .content-link { flex-direction: column;}
+    .content-link .izq { width: 80%; }
+    .content-link .der { width: initial; flex: none; padding-left: 0px; width: 100%; margin-top: 47px; display: flex; flex-direction: column; align-items: flex-end;}
+    .content-link .der .lines1 { width: 90%;}
+    .content-link .der h6 { width: 90%;}
+    .content-link .der button { width: auto; margin-right: auto; margin-left: 10%; }
+    .content-link .der h6 { font-size: 10vw; line-height: 6.7vw;}
+    .content-link .der h6 span { font-size: 2.8vw;}
+
+    .content-link2 .in { width: 100%;left: 0%;}
+    .content-link2 .in h6 { font-size: 9.5vw; line-height: 10.1vw;padding-left: 5vw;}
+    .content-link2 .in button { padding-left: 5vw;}
+    .content-link2 .in .pic { left: 36vw; }
+    .content-link2 .in .pic img { top: 50%; left: 50%; transform: translate(-50%,-50%); width: auto; height: 100%;}
+    .content-link2 .in .lines1 { right: 5vw; left: 5vw; height: 54px;}
+    .content-link2 .background { right: 5vw;}
+
+}
+
+
+
+
+
+@media screen and (max-width:560px){
+    .content-menu-mobile .logo img { width: 220px; }
+    .content-menu-mobile .logo { padding: 15px 0px; }
+    .content-menu-mobile .languaje-mob { padding-bottom: 30px;}
+    .content-menu-mobile nav p { font-size: 15px; margin: 0.05em 0em; }
+
+    .hero-content .txt-container { left: 4%;}
+    .hero-content .logo { max-width: 200px;}
+    .hero-content .txt-container h2 { font-size: 9vw; line-height: 10.4vw;margin-left: 5vw; margin-top: 4vw;}
+    .hero-content .txt-container p.p3 { font-size: 4.2vw; line-height: 5.4vw;}
+    .hero-content .lines2 img {        height: 3.5vh;    }
+    .hero-content .txt-container p.p1 { font-size: 5.3vw; line-height: 7.4vw; margin-bottom: 3vw; margin-left: 5vw; }
+
+    .hero-content.hero-content.nuestros-vinos p.p2 { font-size: 13vw; line-height: 14.4vw; margin-left: 5vw; margin-top: 4vw; }
+    .hero-content.hero-content.nuestros-vinos p.p3 { font-size: 6.2vw; line-height: 8.4vw; margin-left: 5vw;}
+
+    footer .foot-mobile li p {  font-size: 2.3vw; }
+
+    .btn-gold { width: 100%;margin-bottom: 16px;}
+    .btn-white {width: 100%; margin-bottom: 16px;}
+    .btn-blue {width: 100%; margin-bottom: 16px;}
+
+    .destacado1 { margin-top: 80px;}
+    .destacado1 .col1 h5 { font-size: 7.3vw; line-height: 8vw; margin-top: -7vw; }
+    .destacado1 .col1 .nombre { letter-spacing: 0px; font-size: 3vw; margin-top: 0px;}
+    .destacado1 .col2>p { font-size: 16px; line-height: 27px;}
+
+    .destacado2 { margin-top: 0px;}
+    .destacado2 .title { flex-direction: row-reverse;}
+    .destacado2 .lines1 { top: -14px; height: 20px; width: 87vw;}
+    .destacado2 .lines2 { display: none }
+    .destacado2 h5 { font-size: 8vw; line-height: 9vw; text-align: left; right: initial; left: 8vw;}
+    .destacado2 .title .sello { width: 30%; left: initial; right: 1vw;}
+    .destacado2-content { margin-top: 20px;}
+    .destacado2-content .col2 { width: 100%;}
+    .destacado2-content .col1 { width: 72%;    }
+    .destacado2-content .col1 .in>p {font-size: 16px; line-height: 27px;}
+    .destacado2-content .background { right: 0vw; left: 3vw; top: -44vw; height: 250px;}
+
+    .destacado3 {  background-position: center left;}
+    .destacado3-content .info>p {font-size: 16px; line-height: 27px;}
+    .destacado3-content .info h5 { font-size: 8.5vw; line-height: 10.1vw; }
+
+    .novedades .title h5 { font-size: 9.5vw; }
+    .list-news .item .txt-cont h6 { font-size: 6vw; line-height: 6.8vw; }
+    .list-news .item .txt-cont>p {font-size: 16px; line-height: 27px; }
+
+
+    .contenedor-vinos h4 {  font-size: 10.3vw; line-height: 10vw; }
+    .contenedor-vinos h4>span {font-size: 5vw;}
+    .contenedor-vinos>p {   font-size: 16px;        line-height: 26px;   width: 100%;  }
+
+    .content-link .izq { width: 100%; }
+    .content-link .izq .border { right: 0%; bottom: initial; top: -3%;}
+    .content-link .der .lines1 {  height: 15px; margin-bottom: -10px;}
+    .content-link .der h6 { font-size: 13vw; line-height: 9.7vw; margin-bottom: 15px; }
+    .content-link .der h6 span { font-size: 4vw;}
+
+    .content-link2 .in .pic {left: 0vw;}
+    .content-link2 .in a { z-index: 10}
+    .content-link2 .in { padding-top: 150px; padding-bottom: 30px;    }
+    .content-link2 .in h6 { font-size: 13.5vw; line-height: 15.1vw; padding-left: 5vw; }
+    .content-link2 .in .lines1 { left: 0vw;}
+    .content-link2 .in .lines1 .box2 { display: none }
+
+
+
+}
+
+
+
+
+
+@media screen and (max-width:400px){
+    .content-menu-mobile .logo img { width: 200px; }
+    .content-menu-mobile .logo { padding: 12px 0px; }
+    .content-menu-mobile nav p { font-size: 14px;  }
+    .content-menu-mobile .languaje-mob { padding-bottom: 20px;}
+
+    .hero-content .txt-container h2 { font-size: 9.5vw; line-height: 11vw;}
+    .hero-content .txt-container p.p3 { font-size: 5.2vw; line-height: 6.4vw; margin-left: 5vw; }
+    .hero-content .txt-container p.p1 { font-size: 5.8vw; line-height: 8vw;}
+
+    footer .foot-mobile li p {  font-size: 2.8vw; }
+
+    .contenedor-vinos h4 {  font-size: 11vw; line-height: 10.5vw; }
+    .contenedor-vinos h4>span { font-size: 5.6vw; }
+
+
+    .content-link2 .in h6 { font-size: 15vw; line-height: 17vw; }
+
+}
+
+
+
+
+
