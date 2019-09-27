@@ -6,7 +6,8 @@ $(document).ready(function() {
 
 
     $( ".menu-mobile" ).click(function() {
-        $(".content-menu-mobile").fadeIn(500);
+        //$(".content-menu-mobile").animate({ top: '0%'}, 500);
+        $('.content-menu-mobile').animate({ top: '0%' }, { duration: 1200, queue: false, easing: 'easeInOutQuart' })
         $(".content-menu-mobile").css("display", "flex");
         $(".content-menu-mobile nav a:nth-child(1)").delay(200).animate({opacity: 1}, 400);
         $(".content-menu-mobile nav a:nth-child(2)").delay(350).animate({opacity: 1}, 400);
@@ -18,14 +19,11 @@ $(document).ready(function() {
     });
 
     $( ".content-menu-mobile .close" ).click(function() {
-        $(".content-menu-mobile").fadeOut(500);
-        $(".content-menu-mobile nav a").animate({opacity: 0}, 100);
+        $('.content-menu-mobile').animate({ top: '-100%'}, { duration: 1200, queue: false, easing: 'easeInOutQuart' })
+        $(".content-menu-mobile nav a").animate({opacity: 0}, 500);
     });
 
-    
-    
-    
-    
+
 
 });
 

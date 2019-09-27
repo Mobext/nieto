@@ -8,8 +8,24 @@ html, body, * {
 .clear60 { width: 100%; height: 0; clear: both;}
 
 
+.document-opacity { opacity: 1; margin-top: 0vh;}
+#page-loader {
+    position: fixed; display: flex; justify-content: center; align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: #2E3A46;
+    z-index: 9999999;
+}
+#page-loader img { width: 80%; max-width: 300px; }
 
-header { background-color: #2E3A46; position: fixed; top: 0; left: 0; width: 100%; height: auto; text-align: center; z-index: 9999; height: 60px;
+
+
+
+
+header { background-color: #2E3A46; position: fixed; top: -60px; left: 0; width: 100%; height: auto; text-align: center; z-index: 9999; height: 60px; display: flex; justify-content: center; align-items: center;
     -moz-transition:all 0.25s ease 0s;
     -o-transition:all 0.25s ease 0s;
     -ms-transition:all 0.25s ease 0s;
@@ -22,7 +38,7 @@ header * {
 }
 header .logo { position: absolute; left: 0px; height: 70%; top: 50%; transform: translateY(-50%); left: 1rem; opacity: 0;}
 header.header-internas .logo{ opacity: 1;}
-nav {  display: inline-block; margin-top: 0.8rem;}
+nav {  display: inline-block; margin-top: 0rem;}
 nav * {
     -moz-transition:all 0.25s ease 0s;
     -o-transition:all 0.25s ease 0s;
@@ -38,33 +54,25 @@ nav p:hover {opacity: 1;}
 
 .menu-scroll { height: 50px; text-align: right;}
 .menu-scroll .logo { opacity: 1;}
-.menu-scroll nav {  margin-top: 0.6rem; margin-right: 60px; border-right: 1px solid #656F79; padding-right: 10px; }
+.menu-scroll nav { margin-top: 0.3rem;margin-left: 65px;}
 .menu-scroll nav p { font-size: 12px;}
 .menu-scroll .languaje {  top: 0.4rem;}
 .menu-scroll.header-internas .logo { display: block;} 
+.header-internas nav { margin-left: 65px;}
+.menu-scroll .menu-mobile>img {margin-right: 15px;}
 
 
 
 .menu-mobile { justify-content: space-around; align-items: center; display: none; cursor: pointer;}
-.menu-mobile>p { color: #A7907E; font-size: 14px; letter-spacing: 1px;}
+.menu-mobile>p { color: #A7907E; font-size: 14px; letter-spacing: 1px; margin-right: 20px;}
 .menu-mobile>img { width: 14px;}
 
 
 
-#page-loader {
-    position: fixed; display: flex; justify-content: center; align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    background-color: #2E3A46;
-    z-index: 9999999;
-}
-#page-loader img { width: 80%; max-width: 300px; }
+
 
  
-.content-menu-mobile { width: 100%; height: 100%; position: fixed; background-color: #2E3A46; z-index: 99999; display: none; flex-direction: column; justify-content: space-around; align-items: center;}
+.content-menu-mobile { width: 100%; height: 100%; position: fixed; background-color: #2E3A46; z-index: 999999999; top: -100%; display: block; flex-direction: column; justify-content: space-around; align-items: center;}
 .content-menu-mobile .logo { width: 100%; display: flex; justify-content: center; align-items: center; padding: 20px 0px; }
 .content-menu-mobile .logo img { width: 260px}
 .content-menu-mobile nav { display: flex; flex-direction: column; text-align: center; border-top: 1px solid #6a727b; width: 100%;  flex: 1; justify-content: center;}
@@ -86,7 +94,7 @@ nav p:hover {opacity: 1;}
 
 
 
-.fixed-option { position: fixed; right: 0; bottom: 12%; background-color: #2E3A46; z-index: 10; padding: 0.8rem 0.7rem; text-align: center; font-size: 16px; z-index: 100;}
+.fixed-option { position: fixed; right: -60px; bottom: 12%; background-color: #2E3A46; z-index: 10; padding: 0.8rem 0.7rem; text-align: center; font-size: 16px; z-index: 100;}
 .fixed-option p { color: #FFF; font-weight: 500; padding: 0.2em 0.3em; font-size: 0.8em;}
 .fixed-option .line { width: 1.1em; height: 1px; background-color: #FFF; margin: 0.4em auto; opacity: 0.4;}
 .fixed-option img { width: 1em;}
@@ -128,8 +136,8 @@ nav p:hover {opacity: 1;}
 
 
 
-
-.hero-content { width: 100%; position: relative; margin-top: 60px; height: 88vh;  /*background-image: url(../img/fondo-home.jpg); background-position:  center center; background-size: cover;*/ text-align: center; z-index: 1; overflow: ;}
+.fix-alto-header { width: 100%; height: 60px; background-color: #2E3A46;}
+.hero-content { width: 100%; position: relative; height: 88vh; overflow: hidden;  /*background-image: url(../img/fondo-home.jpg); background-position:  center center; background-size: cover;*/ text-align: center; z-index: 1;}
 .hero-content .logo { position: relative; top: 7vh; height: 13vh;}
 .hero-content .know-more { position: absolute; bottom: 0px; z-index: 2; left: 50%; transform: translateX(-50%); text-align: center; cursor: pointer;}
 .hero-content .know-more p { font-size: 0.8rem; color: #FFF; font-weight: 500; margin-bottom: 7px;}
@@ -150,14 +158,21 @@ nav p:hover {opacity: 1;}
 .hero-content .lines2 { position: absolute; bottom: 0; left: 0; width: 1px; height: 9vh; border-left: 1px solid #FFF; box-sizing: border-box}
 .hero-content .lines2 img { height: 5vh; position: absolute; top: -7vh; left: 50%; transform: translateX(-50%);}
 
-.hero-content.nuestros-vinos { background-image: url(../img/nuestros-vinos.jpg); background-position:  center center; background-size: cover;}
-.hero-content.nuestros-espumantes { background-image: url(../img/nuestros-espumantes.jpg); background-position:  center center; background-size: cover;}
 
-.overlay-video { background: black; z-index: -10; position: absolute; top: 0; left: 0; min-width: 100%; max-width: 100%; min-height: 100%; opacity: 1; overflow: hidden;}
+
+.overlay-video { background: black; z-index: -10; position: absolute; top: 80%; left: 0; min-width: 100%; max-width: 100%; min-height: 100%; opacity: 1; overflow: hidden;}
 .overlay-video .black { position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.4)}
 .elvideo {  position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -100; transform: translateX(-50%) translateY(-50%); background-size: cover; transition: 1s opacity;}
 
+
+
+.foto-fondo { background: red; position: absolute; width: 100%; height: 100%; left: 0; top: 80%; opacity: 1; overflow: hidden; z-index: -1;}
+.foto-fondo.nuestros-espumantes { background-image: url(../img/nuestros-espumantes.jpg); background-position:  center center; background-size: cover;}
+.foto-fondo.nuestros-vinos { background-image: url(../img/nuestros-vinos.jpg); background-position:  center center; background-size: cover;}
+
+
 .hero-content.nuestros-espumantes .txt-container h2 { margin-top: 1vh; }
+
 
 
 
@@ -358,9 +373,9 @@ background-image: url(../img/background-misc-1.png); background-size: cover;}
 .lista-vinos.column-3 .item .cont-foto { width: 100%; height: 250px; }
 
 
-.lista-vinos.column-2 { max-width: 900px; margin-top: 120px;}
-.lista-vinos.column-2 .item {flex: none; margin-bottom: 80px;  width: 320px; padding: 0px 20px;}
-.lista-vinos.column-2 .item .cont-foto { width: 100%; height:320px; }
+.lista-vinos.column-2 { max-width: 700px; margin-top: 120px;}
+.lista-vinos.column-2 .item {flex: none; margin-bottom: 45px;  width: 250px; padding: 0px 30px;}
+.lista-vinos.column-2 .item .cont-foto { width: 100%; height:250px; }
 .lista-vinos.column-2 .item .cont-foto .foto { background-image: url(../img/wood-1.png); background-size: cover; background-position:  center center; overflow: visible; }
 .lista-vinos.column-2 .item .cont-foto .foto .botella { position: absolute; height: 120%; top: 53%;
     -moz-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s;
@@ -420,12 +435,16 @@ background-image: url(../img/background-misc-1.png); background-size: cover;}
 
 @media screen and (max-width:1200px){
     header { height: 56px;}
-    header.header-internas .logo{ width: 80px;}
+    header.header-internas .logo { width: 80px;}
+    .menu-scroll .logo {        width: 80px;    }
 
+    .fix-alto-header { height: 56px;}
+
+    nav {margin-top: 0.3rem;   }
     nav p { font-size: 11px; margin: 0px 0.1em;}
+    
     .languaje { right: 0.4rem;}
-    .hero-content { margin-top: 56px;}
-    .menu-scroll nav { margin-right: 46px; padding-right: 12px;}
+    .menu-scroll nav { }
     .menu-scroll nav p { font-size: 11px; margin: 0px;}
     
     .destacado1 { margin-top: 120px;}
@@ -449,26 +468,30 @@ background-image: url(../img/background-misc-1.png); background-size: cover;}
 
 @media screen and (max-width:960px){
 
-    .overlay-video { display: none}
-    .hero-content {  background-image: url(../img/fondo-home.jpg); background-position:  center center; background-size: cover;}
+    .fix-alto-header { height: 0px;}
 
-    header { width: 100px; height: auto; padding: 6px 0px; top: 5px; right: 5px; left: initial;}
+    .overlay-video { background-image: url(../img/fondo-home.jpg); background-position:  center center; background-size: cover;}
+    .overlay-video .elvideo { display: none; }
+    .overlay-video .black { display: none; }
+    /* .hero-content {  background-image: url(../img/fondo-home.jpg); background-position:  center center; background-size: cover;} */
+
+    header { width: 100px; height: auto; padding: 6px 0px;  right: 5px; left: initial; margin-top: 5px;}
     header .logo { left: -5rem; }
-    header.header-internas .logo{ display: none;}
+    header.header-internas .logo { display: none;}
     .menu-mobile {display: flex; cursor: pointer;}
     nav { display: none;}
     .languaje { display: none;}
     .hero-content { margin-top: 0px;}
-    .menu-scroll { width: 100%; top: 0; right: 0; display: flex; height: 44px;}
+    .menu-scroll { width: 100%; top: 0; right: 0; display: flex; height: 44px; margin-top: 0px}
     .menu-scroll .menu-mobile { width: 100px; margin-left: auto;}
-    .menu-scroll .logo { left: 1rem; }
+    .menu-scroll .logo { left: 1rem; width: 80px }
     
-    .hero-content { height: 96vh;}
+    .hero-content { height: 90vh;}
     .hero-content .txt-container { left: 4%; top: 31vh;}
     .hero-content .txt-container p { margin-left: 4vh;}
     .hero-content .txt-container h2 { font-size: 6vw; line-height: 6.7vw;margin-left: 4vw;}
     .hero-content .txt-container p.p3 { font-size: 2.4vw; line-height: 3.5vw;}
-    .hero-content .lines1 { width: 3vh;height: 47vh; }
+    .hero-content .lines1 { width: 3vh;height: 41vh; }
     .hero-content .txt-container p.p1 { font-size: 3.3vw; line-height: 4.4vw; margin-bottom: 2vw;}
 
     .hero-content.nuestros-vinos p.p2 { font-size: 8vw; line-height: 8.5vw;}
@@ -570,9 +593,8 @@ background-image: url(../img/background-misc-1.png); background-size: cover;}
     .content-link .izq { width: 80%; }
     .content-link .der { width: initial; flex: none; padding-left: 0px; width: 100%; margin-top: 47px; display: flex; flex-direction: column; align-items: flex-end;}
     .content-link .der .lines1 { width: 90%;}
-    .content-link .der h6 { width: 90%;}
-    .content-link .der button { width: auto; margin-right: auto; margin-left: 10%; }
-    .content-link .der h6 { font-size: 10vw; line-height: 6.7vw;}
+    .content-link .der a { width: auto; margin-right: auto; margin-left: 10%; }
+    .content-link .der h6 { width: 90%; font-size: 10vw; line-height: 6.7vw;}
     .content-link .der h6 span { font-size: 2.8vw;}
 
     .content-link2 .in { width: 100%;left: 0%;}
@@ -599,7 +621,8 @@ background-image: url(../img/background-misc-1.png); background-size: cover;}
     .hero-content .logo { max-width: 200px;}
     .hero-content .txt-container h2 { font-size: 9vw; line-height: 10.4vw;margin-left: 5vw; margin-top: 4vw;}
     .hero-content .txt-container p.p3 { font-size: 4.2vw; line-height: 5.4vw;}
-    .hero-content .lines2 img {        height: 3.5vh;    }
+    .hero-content .lines2 img { height: 4.2vh; }
+    .hero-content .lines2 { height: 8vh;}
     .hero-content .txt-container p.p1 { font-size: 5.3vw; line-height: 7.4vw; margin-bottom: 3vw; margin-left: 5vw; }
 
     .hero-content.hero-content.nuestros-vinos p.p2 { font-size: 13vw; line-height: 14.4vw; margin-left: 5vw; margin-top: 4vw; }
