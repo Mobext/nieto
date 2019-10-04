@@ -4,6 +4,17 @@ $(document).ready(function() {
         $('html, body').animate({ scrollTop: $(".anclaKnowmore").offset().top-100 }, 1200);
     });
 
+    $( ".flecha-bajar" ).click(function() {
+        $('html, body').animate({ scrollTop: $(".anclaFlechabajar").offset().top-100 }, 1200);
+    });
+
+    $( ".btn-more2" ).click(function() {
+        $('html, body').animate({ scrollTop: $(".anclaPremios").offset().top-100 }, 1200);
+    });
+
+    
+    
+
 
     $( ".menu-mobile" ).click(function() {
         //$(".content-menu-mobile").animate({ top: '0%'}, 500);

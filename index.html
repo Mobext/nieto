@@ -16,11 +16,10 @@
 
 <body>
 
+<!--
 <div id="page-loader"><img src="img/logo.svg" alt="" class="logo"></div>
-
-
 <div class="document-opacity">
-
+-->
 
 
 <div class="fixed-option">
@@ -35,7 +34,7 @@
     <img src="img/icClose.svg" alt="" class="close">
     <div class="logo"><img src="img/logo.svg" alt="" class="logo"></div>
     <nav>
-        <a href=""><p>Nosotros<span></span></p></a> 
+        <a href="nosotros.html"><p>Nosotros<span></span></p></a> 
         <a href="nuestros-vinos.html"><p>nuestros vinos<span></span></p></a> 
         <a href="nuestros-espumantes.html"><p>Nuestros espumantes<span></span></p></a> 
         <a href=""><p>Turismo Mendoza<span></span></p></a> 
@@ -56,14 +55,14 @@
 
 
 
-<header>
+<header class="header-home">
     <div class="menu-mobile">
         <p>MENÚ</p>
         <img src="img/icMenu.svg" alt="">
     </div>
-    <img src="img/logo.svg" alt="" class="logo">
+    <img src="img/logo_2.svg" alt="" class="logo">
     <nav>
-        <a href=""><p>Nosotros<span></span></p></a> 
+        <a href="nosotros.html"><p>Nosotros<span></span></p></a> 
         <a href="nuestros-vinos.html"><p>nuestros vinos<span></span></p></a> 
         <a href="nuestros-espumantes.html"><p>Nuestros espumantes<span></span></p></a> 
         <a href=""><p>Turismo Mendoza<span></span></p></a> 
@@ -101,7 +100,7 @@
 
         <div class="overlay-video">
             <div class="black"></div>
-            <video  poster="img/fondo-home.jpg" id="bgvid" class="elvideo" playsinline autoplay muted loop>
+            <video  poster="img/backgrounds/fondo-home.jpg" id="bgvid" class="elvideo" playsinline autoplay muted loop>
                 <source src="img/videoHome/video.mp4" type="video/mp4">
             </video>
         </div>      
@@ -115,10 +114,12 @@
         <div class="lines1"><div class="cl1"></div><div class="cl2"></div></div>
         <div class="lines2"></div>
         <div class="col1">
-            <h5 data-aos="fade-up" data-aos-easing="ease-out-quart"  data-aos-duration="700" data-aos-delay="300">
+            <h5 data-aos="fade-up" data-aos-easing="ease-out-quart"  data-aos-duration="700" data-aos-delay="100">
                 Aprendiendo a hacer<br>vinos desde 1888</h5>
-            <img src="img/foto-1.jpg" alt="" data-aos="fade-in" data-aos-easing="ease-out-quart"  data-aos-duration="700" data-aos-delay="100">
-            <p class="nombre" data-aos="fade-up" data-aos-easing="ease-out-quart"  data-aos-duration="600" data-aos-delay="500">Finca Agrelo · Las Tortugas · 1050 msm</p>
+            <div data-aos="fade-up" data-aos-easing="ease-out-quart"  data-aos-duration="700" data-aos-delay="250">
+                <img src="img/foto-1.jpg">
+                <p class="nombre">Finca Agrelo · Las Tortugas · 1050 msm</p>
+            </div>
         </div>
         <div class="col2">
             <p data-aos="fade-in" data-aos-easing="ease-out-quart"  data-aos-duration="700" data-aos-delay="300">
@@ -144,8 +145,8 @@
             <div class="col1">
                 <div class="in">
                     <p data-aos="fade-in" data-aos-easing="ease-out-quart"  data-aos-duration="700" data-aos-delay="100">
-                        <b>Llevamos a tu copa la historia y la montaña</b>
-                        <br><br>
+                        <!-- <b>Llevamos a tu copa la historia y la montaña</b>
+                        <br><br> -->
                         En nuestras fincas de Luján de Cuyo, al pie de la Cordillera de los Andes, cada vendimia es un nuevo desafío. Otra vez, las labores de todo un año se ponen a punto, para ofrecerte una experiencia única e irrepetible. Cada nuevo ciclo renueva el reto de sostener la calidad, privilegiar la excelencia y brindar siempre la experiencia única que solo pueden ofrecer los grandes vinos.
                             
                     </p>
@@ -177,7 +178,6 @@
                 <button class="btn-white" data-aos="fade-up" data-aos-easing="ease-out-quart"  data-aos-duration="700" data-aos-delay="300"><p>MENDOZA</p><span></span></button>
                 <button class="btn-white" data-aos="fade-up" data-aos-easing="ease-out-quart"  data-aos-duration="700" data-aos-delay="450"><p>BUENOS AIRES</p><span></span></button>
             </div>
-            <div class="foto" data-aos="fade-in" data-aos-easing="ease-out-quart"  data-aos-duration="800" data-aos-delay="300"></div>
         </div>        
 
     </section>
@@ -232,7 +232,7 @@
     <img src="img/logo.svg" alt="" class="logo">
     <div class="line"></div>
     <nav>
-        <a href=""><p>Nosotros<span></span></p></a>
+        <a href="nosotros.html"><p>Nosotros<span></span></p></a>
         <span>·</span>
         <a href="nuestros-vinos.html"><p>nuestros vinos<span></span></p></a>
         <span>·</span>
@@ -264,7 +264,7 @@
 
 
 
-</div>
+<!-- </div> -->
 
 
 
@@ -291,7 +291,7 @@
     $(document).on('ready', function() {    
         $(".list-news").slick({
             centerMode: false,
-            arrow: false,
+            arrows: false,
             dots: false,
             slidesToShow: 2,
             slidesToScroll: 2,

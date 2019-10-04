@@ -32,6 +32,7 @@ $(window).load(function(){
     $('.document-opacity').animate({ marginTop: '0vw', opacity: 1 }, { duration: 1500, queue: false, easing: 'easeInOutBack' })
     $('header').delay(400).animate({ top: '0px' , opacity: 1 }, 600);
     $('.fixed-option ').animate({ right: '0px'}, 500);
-    $('.overlay-video').animate({ top: '0%'}, { duration: 1300, queue: false, easing: 'easeInOutBack' })
+    // $('.overlay-video').animate({ top: '0%'}, { duration: 1300, queue: false, easing: 'easeInOutBack' })
+    $('.overlay-video').animate({ opacity: 1}, { duration: 700, queue: false, easing: 'easeInOutBack' })
     $('.foto-fondo ').animate({ top: '0%' }, { duration: 1300, queue: false, easing: 'easeInOutBack' })
 });
