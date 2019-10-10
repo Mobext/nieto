@@ -13,6 +13,21 @@ $(document).ready(function() {
     });
 
     
+    $( ".btn-actividades" ).click(function() {
+        $('html, body').animate({ scrollTop: $(".anclaActividades").offset().top-100 }, 1200);
+    });
+
+    $( ".btn-consultas" ).click(function() {
+        $('html, body').animate({ scrollTop: $(".anclaConsultas").offset().top-100 }, 1200);
+    });
+
+    $( ".head-actividades .flecha" ).click(function() {
+        $('html, body').animate({ scrollTop: $(".anclaActvidad").offset().top-100 }, 1200);
+    });
+    
+    
+
+    
     
 
 
