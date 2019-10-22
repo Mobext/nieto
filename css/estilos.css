@@ -5,9 +5,37 @@ html, body, * {
     line-height: 24px;
     font-weight: 300; 
 }
+i { font-style:italic;}
 .clear60 { width: 100%; height: 0; clear: both;}
 .clear0 { width: 100%; height: 0; clear: both;}
 *:focus { outline: none}
+
+
+
+
+.filtro { position: absolute; width: 100%; height: 100%; background-image: url(../img/backgrounds/fondo-home.jpg); background-size: cover; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.filtro .logo { width: 330px; margin-bottom: 14vh;}
+.filtro .bloque { background-color: rgba(46,58,70,0.7); text-align: center; padding: 50px 30px; padding-bottom: 60px; box-sizing: border-box; width: 450px; position: relative;}
+.filtro .bloque .idiomas { display: flex; justify-content: space-around; width: 90%;margin: auto; margin-bottom: 20px;}
+.filtro .bloque .idiomas p { color: #bfa590; position: relative; padding: 6px 10px; overflow: hidden; cursor: pointer;}
+.filtro .bloque .idiomas p span { position: absolute; width: 100%; height: 1px; background-color: #FFF; left: -100%; bottom: 0;
+    -moz-transition:all 0.25s ease 0s;
+    -o-transition:all 0.25s ease 0s;
+    -ms-transition:all 0.25s ease 0s;
+    -webkit-transition:all 0.25s ease 0s;}
+.filtro .bloque .idiomas p:hover { color: #FFF;}
+.filtro .bloque .idiomas p:hover span { left: 0%;}
+.filtro .bloque>p { color: #FFF; font-size: 14px; line-height: 21px; font-weight: 300; width: 80%; margin:auto}
+.filtro .bloque button { position: absolute; bottom: 0px; left: 50%; transform: translate(-50%,50%); color: #FFF; background-color: #a7907e; padding: 12px 32px; border: none; font-weight: 400; letter-spacing: 1px; font-size: 14px;
+    -moz-transition:all 0.25s ease 0s;
+    -o-transition:all 0.25s ease 0s;
+    -ms-transition:all 0.25s ease 0s;
+    -webkit-transition:all 0.25s ease 0s;}
+.filtro .bloque button:hover { background-color: #877362;}
+.filtro .bloque .idiomas p.active { color: #FFF;}
+.filtro .bloque .idiomas p.active span { left:0%}
+
+
 
 
 .document-opacity { opacity: 1; margin-top: 0vh;}
@@ -214,6 +242,7 @@ nav p:hover {opacity: 1;}
 .foto-fondo.benjamin { background-image: url(../img/backgrounds/benjamin.jpg);}
 .foto-fondo.nosotros { background-image: url(../img/backgrounds/nosotros.jpg);}
 .foto-fondo.turismo { background-image: url(../img/backgrounds/turismo.jpg);}
+.foto-fondo.buenosaires { background-image: url(../img/backgrounds/buenosaires.jpg);}
 .foto-fondo.grand-cuvee { background-image: url(../img/backgrounds/grand-cuvee.jpg);}
 .foto-fondo.premiosFondo { background-image: url(../img/backgrounds/premios.jpg);}
 
@@ -266,7 +295,7 @@ nav p:hover {opacity: 1;}
 
 .destacado3 { width: 100%;  position: relative; margin-top: 230px; margin-bottom: 100px; }
 .destacado3 .lines1 { position: absolute; width: 55vw; height: 70px; top: -110px; left: 0; box-sizing: border-box;border-top: 1px solid #A7907E; border-right: 1px solid #A7907E; }
-.destacado3-content { display: flex; align-items: center; position: relative; width: 90vw; margin-left: auto;
+.destacado3-content { display: flex; align-items: center; position: relative; width: 90vw; margin-left: auto; justify-content: flex-end;
     background-image: url(../img/foto-fondo-exp.jpg); background-size: cover; background-position:  center center; }
 .destacado3-content .info { width: 50%; padding: 7vw 5vw; padding-bottom: 4vw; background-color:rgba(46,58,70,0.75) }
 .destacado3-content .info > * { color: #FFF;}
@@ -275,8 +304,8 @@ nav p:hover {opacity: 1;}
 .destacado3-content .info button { margin-right: 20px;}
 .destacado3-content .foto { width: 35vw; height: 560px; background-image: url(../img/foto-3.jpg); background-size: cover; background-position: center center;}
 .destacado3-content .lines2 { position: absolute; width: 80vw; height: 82px; top: 0px; left: 5vw; z-index: 99; }
-.destacado3-content .lines2 .box1 { position: absolute; width: 100%; height: 65%; box-sizing: border-box; border-bottom: 1px solid #FFF; border-right: 1px solid #FFF;}
-.destacado3-content .lines2 .box2 { position: absolute; width: 100%; height: 35%; top: 65%; box-sizing: border-box; border-left: 1px solid #FFF;}
+.destacado3-content .lines2 .box1 { position: absolute; width: 100%; height: 65%; box-sizing: border-box; border-bottom: 1px solid #FFF; border-left: 1px solid #FFF;}
+.destacado3-content .lines2 .box2 { position: absolute; width: 100%; height: 35%; top: 65%; box-sizing: border-box; border-right: 1px solid #FFF;}
 
 
 
@@ -438,13 +467,13 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 
 
 .lista-vinos.column-3 { max-width: 1160px;}
-.lista-vinos.column-3 .item {flex: none; margin-bottom: 30px;  width: 25%;   box-sizing: border-box; }
+.lista-vinos.column-3 .item {flex: none; margin-bottom: 50px;  width: 25%;   box-sizing: border-box; }
 .lista-vinos.column-3 .item .in { width: 100%;  width: 250px; margin:auto;}
 .lista-vinos.column-3 .item .cont-foto { width: 100%; height: 250px; }
 
 
 .lista-vinos.column-2 { max-width: 610px; margin-top: 65px;}
-.lista-vinos.column-2 .item {flex: none; margin-bottom: 30px;  width: 50%;   box-sizing: border-box; }
+.lista-vinos.column-2 .item {flex: none; margin-bottom: 50px;  width: 50%;   box-sizing: border-box; }
 .lista-vinos.column-2 .item .in { width: 100%;  width: 250px; margin:auto;}
 
 .lista-vinos.column-2 .item .cont-foto { width: 100%; height:250px; }
@@ -458,7 +487,7 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 
 
 .lista-vinos.column-3b { max-width: 1200px; margin-top: 70px;}
-.lista-vinos.column-3b .item {flex: none; margin-bottom: 30px;  width: 25%;   box-sizing: border-box; }
+.lista-vinos.column-3b .item {flex: none; margin-bottom: 50px;  width: 25%;   box-sizing: border-box; }
 .lista-vinos.column-3b .item .in { width: 100%;  width: 250px; margin:auto;}
 
 .lista-vinos.column-3b .item .cont-foto { width: 100%; height:250px; }
@@ -469,6 +498,24 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 .lista-vinos.column-3b .item .cont-foto .foto:hover img { height: 126%;}
 .lista-vinos.column-3b .item .cont-logo { margin-top: 26px;}
 .lista-vinos.column-3b .item .logo { width: 170px; max-height: 65px;}
+
+
+
+
+.lista-vinos.column-3c { max-width: 960px; margin-top: 70px;}
+.lista-vinos.column-3c .item {flex: none; margin-bottom: 50px;  width: 33.33%;   box-sizing: border-box; }
+.lista-vinos.column-3c .item .in { width: 100%;  width: 250px; margin:auto;}
+
+.lista-vinos.column-3c .item .cont-foto { width: 100%; height:250px; }
+.lista-vinos.column-3c .item .cont-foto .foto { background-image: url(../img/wood-2.jpg); background-size: cover; background-position:  center center; overflow: visible; }
+.lista-vinos.column-3b .item .cont-foto .foto .botella { position: absolute; height: 120%; top: 53%;
+    -moz-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s; -webkit-transition: all 0.25s ease 0s;}
+.lista-vinos.column-3c .item .cont-foto .foto:hover img { height: 100%;}
+.lista-vinos.column-3c .item .cont-logo { margin-top: 26px;}
+.lista-vinos.column-3c .item .logo { width: 170px; max-height: 65px;}
+
+
 
 
 .contenedor-vinos .lista-vinos .item .cont-tipo { width: 100%; height: auto; padding: 10px 0px; margin-top: 6px; margin-bottom: 12px; position: relative;}
@@ -672,14 +719,14 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 
 
 
-.destacado4 { width: 100%; display: flex; margin: 120px 0px; align-items: flex-end; position: relative;}
+.destacado4 { width: 100%; display: flex; margin: 120px 0px; align-items: center; position: relative;}
 .destacado4 .col1 { width: 46%; position: relative;}
 .destacado4 .col1 h5 { font-family: 'Playfair Display', serif; color: #FFF; font-weight: 900; position: absolute; font-size: 6.3vw; line-height: 4.1vw; letter-spacing: -1px; z-index: 99; bottom: 6vw; left: 10vw;}
 .destacado4 .col1 h5 span {  font-family: 'IBM Plex Sans', sans-serif; font-weight: 300; font-size: 1.8vw; letter-spacing: 4px;}
 .destacado4 .col1 img { width: 100%;}
 .destacado4 .col1 .nombre { text-transform: uppercase; letter-spacing: 2px; font-size: 1vw; text-align: right; font-weight: 300; margin-top: 12px;}
 .destacado4 .col2 { flex: 1; padding: 0px 9vw}
-.destacado4 .col2>p { font-size: 18px; line-height: 33px; font-weight: 300; margin-top: 0%;}
+.destacado4 .col2>p { font-size: 18px;line-height: 31px; font-weight: 300; margin-top: 0%;}
 .destacado4 .col2>p b { font-weight: 500;}
 .destacado4 .lines2 { position: absolute; top: -15vw; left: 50%; box-sizing: border-box; width: 2vw; height: 35vw; border-right: 1px solid #A7907E; border-bottom: 1px solid #A7907E; 
     transform: translateX(-100%);
@@ -774,7 +821,7 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 .gente1 { display: flex; width: 100%; height: auto; justify-content: center; align-items: center; margin: 50px 0px;}
 .gente1 .izq { width: 50%; position: relative;}
 .gente1 .izq .line1 { width: 35%; height: 10px; background-color: #2E3A46;}
-.gente1 .izq .line2 { width: 25%; height: 20vw; position: absolute; border-top: 1px solid #A7907E; border-right: 1px solid #A7907E;  bottom: -18vw; left: 92%; z-index: -1;}
+.gente1 .izq .line2 { width: 25%; height: 20vw; position: absolute; border-top: 1px solid #A7907E; border-right: 1px solid #A7907E;  bottom: -18vw; left: 92%; z-index: -1; display: none;}
 .gente1 .izq img { width: 92%;}
 .gente1 .der { flex: 1; padding-right: 10vw; padding-left: 1vw;}
 .gente1 .der span { color: #A7907E; font-size: 1vw; letter-spacing: 3px;}
@@ -825,6 +872,7 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 .destacado5 { width: 100%; display: flex; margin: 120px 0px; align-items:center; position: relative; margin-bottom: 100px}
 .destacado5 .col1 { width: 46%; position: relative;}
 .destacado5 .col1 img { width: 100%;}
+.destacado5 .col1 .refe { text-transform: uppercase; font-size: 16px; text-align: right;}
 .destacado5 .col2 { flex: 1; padding: 0px 8vw}
 .destacado5 .col2 h5 { font-family: 'Playfair Display', serif; color: #2E3A46; font-weight: 600; font-size: 5.5vw; line-height: 2.7vw; margin-bottom: 4vw;}
 .destacado5 .col2 h5 span { font-size: 1.4vw; font-weight: 300; letter-spacing: 0.4vw;}
@@ -857,7 +905,7 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 .actividades .cada-actividad .izq img { width: 100%;}
 .actividades .cada-actividad .izq .line2 { width: 70%; height: 12px; position: absolute; bottom: -5px; z-index: 0;margin-left: 15%; }
 .actividades .cada-actividad .der { flex: 1; padding: 0px 6vw;}
-.actividades .cada-actividad .der h6 { font-family: 'Playfair Display', serif; color: #2E3A46; font-size: 3vw; font-weight: 600; margin-bottom: 2vw;}
+.actividades .cada-actividad .der h6 { font-family: 'Playfair Display', serif; color: #2E3A46; font-size: 3vw; line-height: 3.5vw; font-weight: 600; margin-bottom: 2vw;}
 .actividades .cada-actividad .der>p { font-size: 16px; line-height: 28px; margin-bottom: 1.8vw;}
 
 
@@ -911,16 +959,16 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 
 
 .experiencias-in .la-experiencia { width: 90vw; height: auto; position: relative; overflow: hidden; text-align: right; margin-top: 4vw;}
-.experiencias-in .la-experiencia .fondo { position: absolute; object-fit: cover; height: 100%; z-index: -1; top: 0; left: 0;}
+.experiencias-in .la-experiencia.mendoza { background-image: url(../img/casa-nieto.jpg); background-size: cover; background-position:  center center;}
+.experiencias-in .la-experiencia.bsas { background-image: url(../img/casa-vistalba2.jpg); background-size: cover; background-position:  center center;}
+.experiencias-in .la-experiencia .fondo { position: absolute; object-fit: cover; width: 100%; z-index: -1; top: 0; left: 0;}
 .experiencias-in .la-experiencia .info { margin-top: 18vw; margin-right: 4vw; margin-bottom: 4vw;}
 .experiencias-in .la-experiencia .info h6 { font-family: 'Playfair Display', serif; color: #FFF; font-weight: 600;  font-size: 5.5vw; line-height: 4.5vw; letter-spacing: -1px; }
 .experiencias-in .la-experiencia .info h6 span { font-family: 'Playfair Display', serif;  font-size: 4.5vw;}
 .experiencias-in .la-experiencia .info>p { color: #FFF; font-size: 1vw; letter-spacing: 0.4vw; text-transform: uppercase; margin-top: 1vw;}
 .experiencias-in .la-experiencia .info .btn-more { margin-left: auto;}
 .experiencias-in .la-experiencia .info .btn-more p { color: #FFF;}
-.experiencias-in .la-experiencia .back-color {  position: absolute; z-index: -1; top: 0; bottom: 0; right: 0; width: 40vw;}
-.experiencias-in .la-experiencia .back-color .fr1 { background-color: #8B544F; opacity: 0.3; position: absolute; height: 100%; left: 0; width: 30%;}
-.experiencias-in .la-experiencia .back-color .fr2 { background-color: #8B544F; position: absolute; height: 100%; right: 0; width: 70%;}
+.experiencias-in .la-experiencia .back-color {  position: absolute; z-index: -1; top: 0; bottom: 0; right: 0; width: 40vw; background-color: #8B544F; opacity: 0.7;}
 .experiencias-in .la-experiencia .lines { height: 90px; position: absolute; left: 4vw; right: 4vw;  top: 0;}
 .experiencias-in .la-experiencia .lines .box1 { width: 100%; height: 60%; border-bottom: 1px solid #FFF; border-left: 1px solid #FFF;}
 .experiencias-in .la-experiencia .lines .box2 { width: 100%; height: 40%; border-right: 1px solid #FFF;}
@@ -931,7 +979,7 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 
 .head-actividades { width: 100%; height: auto; display: flex; justify-content: center;align-items: center; margin-bottom: 80px;}
 .head-actividades .izq { flex: 1; padding: 0px 5vw; position: relative;}
-.head-actividades .izq .btn-volver { position: absolute; width: 34px; height: 40px; background-color: #2E3A46; left: 0; top: 6%;
+.head-actividades .izq .btn-volver { position: absolute; width: 34px; height: 40px; background-color: #2E3A46; left: 0; top: 6%; cursor: pointer;
     -moz-transition-property: all;  -moz-transition-duration: 0.4s;  
     -webkit-transition-property: all;  -webkit-transition-duration: 0.4s;  
     -o-transition-property: all;  -o-transition-duration: 0.4s;
@@ -1124,6 +1172,11 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 @media screen and (max-width:1350px){
     .lista-vinos.column-3 .item { width: 33.33%;}
     .lista-vinos.column-3b .item { width: 33.33%;}
+    .lista-vinos.column-3c .item { width: 33.33%;}
+
+    
+    .destacado4 .col2>p { font-size: 16px;line-height: 26px; }
+
 }
 
 
@@ -1305,6 +1358,8 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
     .contacto-principal .der .abajo p.info { font-size: 1.5vw; line-height: 2.2vw; margin-bottom: 1.9vw; }
     .contacto-principal .der .cont-form p {   font-size: 1.3vw; }
 
+
+
 }
 
 
@@ -1313,6 +1368,7 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 @media screen and (max-width:1000px){
     .lista-vinos.column-3 .item { width: 50%;}
     .lista-vinos.column-3b .item { width: 50%;}
+    .lista-vinos.column-3c .item { width: 50%;}
 }
 
 
@@ -1761,7 +1817,7 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 
     .actividades .title h5 { font-size: 8.2vw; }
     .actividades .cada-actividad .der>p { display: none}
-    .actividades .cada-actividad .der h6 { font-size: 5vw; line-height: 4.6vw; margin-bottom: 25px; }
+    .actividades .cada-actividad .der h6 { font-size: 5vw; line-height: 5.5vw; margin-bottom: 25px; }
 
     .contacto-in .izq h5 { font-size: 9vw; line-height: 9vw; }
     .contacto-in .izq>p.bajada { font-size: 2.6vw; }
@@ -1785,6 +1841,7 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 
     .lista-vinos.column-3 .item { width: 100%;}
     .lista-vinos.column-3b .item { width: 100%;}
+    .lista-vinos.column-3c .item { width: 100%;}
     .lista-vinos.column-2 .item {width: 100%;}
 
 
@@ -1844,6 +1901,19 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 
     .novedades-all .search {  text-align: center;}
     .novedades-all .search select { width: 38%; margin: 0px 20px; }
+
+    .destacado5 .col1 .refe { font-size: 13px;}
+
+
+
+    .filtro .logo { width: 240px; margin-bottom: 10vh;}
+    .filtro .bloque {  width: 360px; padding: 40px 10px; padding-bottom: 50px;}
+
+
+
+
+
+
 
 }
 
@@ -1906,7 +1976,7 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 
 
     .contenedor-vinos h4 {  font-size: 9.3vw;   line-height: 10.3vw;}
-    .contenedor-vinos h4>span {font-size: 5vw;}
+    .contenedor-vinos h4>span {font-size: 3.5vw;}
     .contenedor-vinos>p {   font-size: 16px;        line-height: 26px;   width: 100%;  }
 
     .content-link .izq { width: 100%; }
@@ -2019,6 +2089,8 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
     .novedades-all .search {  text-align: center;}
     .novedades-all .search select {  width: 80%; margin-bottom: 30px; }
 
+    .experiencias-in .la-experiencia .back-color {   width: 100vw; }
+
 }
 
 
@@ -2038,7 +2110,6 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
     footer .foot-mobile li p {  font-size: 2.8vw; }
 
     .contenedor-vinos h4 {  font-size: 10vw;  line-height: 11.5vw;}
-    .contenedor-vinos h4>span { font-size: 5.6vw; }
 
 
     .content-link2 .in h6 { font-size: 15vw; line-height: 17vw; }
@@ -2055,6 +2126,12 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
     .hero-content .txt-container .btn-slider .btn-white {width: 85%;}
 
     .galeria .title h6 { font-size: 10vw; line-height: 11vw; }
+
+
+    .filtro .logo { width: 210px; margin-bottom: 5vh;}
+    .filtro .bloque {  width: 260px; padding: 30px 10px; padding-bottom: 50px;}
+    .filtro .bloque .idiomas { flex-direction: column; width: 120px;}
+    .filtro .bloque .idiomas p {  margin-bottom: 12px;}
 }
 
 

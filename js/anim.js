@@ -14,15 +14,31 @@ $(document).ready(function() {
 
     
     $( ".btn-actividades" ).click(function() {
-        $('html, body').animate({ scrollTop: $(".anclaActividades").offset().top-100 }, 1200);
+        $('html, body').animate({ scrollTop: $(".anclaActividades").offset().top-100 }, 800);
     });
 
     $( ".btn-consultas" ).click(function() {
-        $('html, body').animate({ scrollTop: $(".anclaConsultas").offset().top-100 }, 1200);
+        $('html, body').animate({ scrollTop: $(".anclaConsultas").offset().top-100 }, 500);
     });
+
+    $( ".btn-reserva-turismo" ).click(function() {
+        $('html, body').animate({ scrollTop: $(".anclaConsultas").offset().top-100 }, 500);
+    });
+    
 
     $( ".head-actividades .flecha" ).click(function() {
         $('html, body').animate({ scrollTop: $(".anclaActvidad").offset().top-100 }, 1200);
+    });
+    
+
+    $( ".head-actividades .flecha" ).click(function() {
+        $('html, body').animate({ scrollTop: $(".anclaActvidad").offset().top-100 }, 1200);
+    });
+
+
+    $( ".idiomas p" ).click(function() {
+        $( ".idiomas p" ).removeClass("active");
+        $(this).addClass("active");
     });
     
     
