@@ -476,7 +476,6 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 .lista-vinos.column-2 { max-width: 610px; margin-top: 65px;}
 .lista-vinos.column-2 .item {flex: none; margin-bottom: 50px;  width: 50%;   box-sizing: border-box; }
 .lista-vinos.column-2 .item .in { width: 100%;  width: 250px; margin:auto;}
-
 .lista-vinos.column-2 .item .cont-foto { width: 100%; height:250px; }
 .lista-vinos.column-2 .item .cont-foto .foto { background-image: url(../img/wood-1.png); background-size: cover; background-position:  center center; overflow: visible; }
 .lista-vinos.column-2 .item .cont-foto .foto .botella { position: absolute; height: 120%; top: 53%;
@@ -490,7 +489,6 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 .lista-vinos.column-3b { max-width: 1200px; margin-top: 70px;}
 .lista-vinos.column-3b .item {flex: none; margin-bottom: 50px;  width: 25%;   box-sizing: border-box; }
 .lista-vinos.column-3b .item .in { width: 100%;  width: 250px; margin:auto;}
-
 .lista-vinos.column-3b .item .cont-foto { width: 100%; height:250px; }
 .lista-vinos.column-3b .item .cont-foto .foto { background-image: url(../img/wood-2.jpg); background-size: cover; background-position:  center center; overflow: visible; }
 .lista-vinos.column-3b .item .cont-foto .foto .botella { position: absolute; height: 120%; top: 53%;
@@ -506,7 +504,6 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 .lista-vinos.column-3c { max-width: 960px; margin-top: 70px;}
 .lista-vinos.column-3c .item {flex: none; margin-bottom: 50px;  width: 33.33%;   box-sizing: border-box; }
 .lista-vinos.column-3c .item .in { width: 100%;  width: 250px; margin:auto;}
-
 .lista-vinos.column-3c .item .cont-foto { width: 100%; height:250px; }
 .lista-vinos.column-3c .item .cont-foto .foto { background-image: url(../img/wood-2.jpg); background-size: cover; background-position:  center center; overflow: visible; }
 .lista-vinos.column-3b .item .cont-foto .foto .botella { position: absolute; height: 120%; top: 53%;
@@ -515,6 +512,21 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
 .lista-vinos.column-3c .item .cont-foto .foto:hover img { height: 100%;}
 .lista-vinos.column-3c .item .cont-logo { margin-top: 26px;}
 .lista-vinos.column-3c .item .logo { width: 170px; max-height: 65px;}
+
+
+
+
+.lista-vinos.column-2b { max-width: 610px; margin-top: 70px;}
+.lista-vinos.column-2b .item {flex: none; margin-bottom: 50px;  width: 50%;   box-sizing: border-box; }
+.lista-vinos.column-2b .item .in { width: 100%;  width: 250px; margin:auto;}
+.lista-vinos.column-2b .item .cont-foto { width: 100%; height:250px; }
+.lista-vinos.column-2b .item .cont-foto .foto { background-color: #FFF;}
+.lista-vinos.column-3b .item .cont-foto .foto .botella { position: absolute; height: 120%; top: 53%;
+    -moz-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s; -webkit-transition: all 0.25s ease 0s;}
+.lista-vinos.column-2b .item .cont-foto .foto:hover img { height: 100%;}
+.lista-vinos.column-2b .item .cont-logo { margin-top: 26px;}
+.lista-vinos.column-2b .item .logo { width: 170px; max-height: 65px;}
 
 
 
@@ -789,12 +801,13 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
 }
-.fincas .cada-finca .datos { width: auto; margin:auto; display: flex; z-index: 100; padding-bottom: 36px; position: relative; justify-content: center;}
+.fincas .cada-finca .datos { width: auto; margin:auto; display: flex; z-index: 100; padding-bottom: 36px; position: relative; justify-content: center;min-height: 160px;}
 .fincas .cada-finca .datos .box { margin:0px 5%;}
+.fincas .cada-finca .datos .box.box100 { margin:0px 2%; width: 24%}
 .fincas .cada-finca .datos .box .linea { width: 1px; height: 80px; background-color: #FFF; margin-top: -40px; margin-bottom: 16px;}
 .fincas .cada-finca .datos .box p.tit { color: #A7907E; font-weight: bold; font-size: 0.8em; line-height: 1.4em; margin-bottom: 6px;}
 .fincas .cada-finca .datos .box p.desc { color: #FFF; font-size: 1.1em }
-.fincas .line2 { position: absolute; width: 24%; height: 25px;background-color: #A7907E; bottom: -6px; left: 4vw; z-index: -1;}
+.fincas .line2 { position: absolute; width: 24%; height: 50px;background-color: #A7907E; bottom: -5px; left: 4vw; z-index: -1;}
 
 .lista-fincas .slick-prev { width: 45px; height: 50px; background-color: #A7907E; left: 0px; top: 40%; background-image: url(../img/izq.svg); background-size: 28px; background-repeat: no-repeat; background-position:  center right;
     -moz-transition-property: all;  -moz-transition-duration: 0.2s;  
@@ -1176,6 +1189,7 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
     .lista-vinos.column-3 .item { width: 33.33%;}
     .lista-vinos.column-3b .item { width: 33.33%;}
     .lista-vinos.column-3c .item { width: 33.33%;}
+    .lista-vinos.column-2b .item { width: 33.33%;}
 
     
     .destacado4 .col2>p { font-size: 16px;line-height: 26px; }
@@ -1372,6 +1386,7 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
     .lista-vinos.column-3 .item { width: 50%;}
     .lista-vinos.column-3b .item { width: 50%;}
     .lista-vinos.column-3c .item { width: 50%;}
+    .lista-vinos.column-2b .item { width: 50%;}
 }
 
 
@@ -1846,6 +1861,7 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
     .lista-vinos.column-3b .item { width: 100%;}
     .lista-vinos.column-3c .item { width: 100%;}
     .lista-vinos.column-2 .item {width: 100%;}
+    .lista-vinos.column-2b .item {width: 100%;}
 
 
     .head-actividades .izq p.nombre { font-size: 6.5vw; line-height: 8.5vw;}
@@ -2022,6 +2038,7 @@ background-image: url(../img/background-misc-1.jpg); background-size: cover;}
     .fincas .cada-finca .datos .box { margin: 0px 0%; width: 50%; margin-bottom: 5vw; order: 1}
     .fincas .cada-finca .datos .box .linea { display: none }
     .fincas .cada-finca .datos .box100 { width: 100%; order: 5}
+    .fincas .cada-finca .datos .box.box100 { width: 100%; order: 5}
     .fincas .line2 { display: none }
     .lista-fincas .slick-prev { top: 22%; height: 35px; width: 35px; background-size: 22px; }
     .lista-fincas .slick-prev:hover { width: 35px;}
